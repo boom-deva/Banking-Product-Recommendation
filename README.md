@@ -14,6 +14,10 @@ While the original competition was far more complex in that it attempted to pred
 
 To that end, we are adjusting the scope of the project by selecting 1 of the 24 banking products (from columns #25 - #48) to set as our target variable (y) and keeping the remaining products as features. The target product we have chosen is whether a user will open a Securities account. The justification is that we tried to avoid overly common features such as Savings and Checking account, which almost everyone should have as their first account with a commercial bank. At the same time, we also tried to avoid ones that were clearly more likely for a particular age group such as Mortgages because anticipating this will be highly concentrated in higher age ranges. Securities makes an interesting case since there’s a business justification behind it: retail banks such as Chase Bank or Bank of America are constantly trying to get their customers to branch out to become customers in their wealth management arm (i.e. JPM Private Bank or Merrill Lynch Wealth Management respectively).
 
+## Data Source
+
+The data can be downloaded along with the corresponding data dictionary [here](https://www.kaggle.com/c/santander-product-recommendation/data?select=train_ver2.csv.zip).
+
 ## Methodology
 
 In terms of models, we seek to first use k-Means Clustering and Hierarchical Clustering to examine if there are clusters of customers that represent a certain profile/persona (e.g. risk-averse, high liquidity, etc.) that can be used as meaningful new features in the model. Hence or otherwise, the main part of our model will then be a supervised learning problem, in particular a binary classification, via Logistic Regression, Decision Tree Classifiers, Random Forest Classifiers, and XGBoosted Tree Classifiers to predict the probability of opening a securities account. 
